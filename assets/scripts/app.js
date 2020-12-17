@@ -32,6 +32,9 @@ function calculation(calcType){
     const getInput=getInputValue();
     const initialResult =currentResult;
     let mathOperator;
+    if(calcType!=='add' && calcType!=='subtract' && calcType!=='multiply' && calcType!=='divide' || getInput===0){
+        return ;
+    }
     if(calcType==='add'){
         currentResult +=getInput;
         mathOperator= '+'
